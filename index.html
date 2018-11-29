@@ -1,63 +1,22 @@
 <head>
   
-<script type="text/javascript">
-    (function(p,u,s,h){
-        p._pcq=p._pcq||[];
-        p._pcq.push(['_currentTime',Date.now()]);
-        s=u.createElement('script');
-        s.type='text/javascript';
-        s.async=true;
-        s.src='https://cdn.pushcrewstaging.com/js/5b1efcce58fd50c758aad9aace578859.js';
-        h=u.getElementsByTagName('script')[0];
-        h.parentNode.insertBefore(s,h);
-    })(window,document);
-</script>
-  
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
-  
- _pcq.push(['APIReady', callbackOnSuccessFunction]); //will execute callback function when PushCrew API is ready
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "e5335045-16b3-4b34-befc-39e8a3734e4f",
+    });
+  });
+</script>  
 
-function callbackOnSuccessFunction() {
-    //now api is ready
-  _pcq.push(['addSubscriberToSegment', 'homepage']);
-  
-}
-  
-  
-</script>
-  
-  
-  <script>
-    window._pcq = window._pcq || [];
-
-_pcq.push(['APIReady', callbackOnAPIReady]); //will execute callback function when PushCrew API is ready
-
-function callbackOnAPIReady() {
-    _pcq.push(['removeSubscriberFromSegment', 'hangloo', callbackForRemoveFromSegment]);  
-}
-
-function callbackForRemoveFromSegment(response) {
-    if(response === -1) {
-        console.log('User is not a subscriber or has blocked notifications');
-    }
-  
-    if(response === false) {
-        console.log('Segment name provided is not valid. Maximum length of segment name can be 30 chars and it can only contain alphanumeric characters, underscore and dash.');
-    }
-  
-    if(response === true) {
-        console.log('User got removed from the segment successfully. Now you may run any code you wish to execute after user gets removed from segment successfully');
-    }
-}
-    </script>
- 
-  
   
 </head>
 
 
 <body>
 
-edge 7 http -1 
+one signal
   
 </body>
